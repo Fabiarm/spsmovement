@@ -13,14 +13,10 @@ namespace SPS.Movement.Common
         public static SPDocumentLibrary GetDocumentLibrary(string webUrl, string docLibUrl)
         {
             SPDocumentLibrary list = null;
-            SPSecurity.RunWithElevatedPrivileges(delegate()
+            Helper.RunElevated(webUrl, Guid.Empty, delegate(SPWeb elevatedWeb)
             {
-                using (SPSite site = new SPSite(webUrl))
-                using (SPWeb web = site.OpenWeb())
-                {
-                    var rUrl = docLibUrl.TrimStart(web.Url.ToCharArray());
-                    list = web.Folders[rUrl].DocumentLibrary;
-                }
+                var rUrl = docLibUrl.TrimStart(elevatedWeb.Url.ToCharArray());
+                list = elevatedWeb.Folders[rUrl].DocumentLibrary;
             });
             return list;
         }

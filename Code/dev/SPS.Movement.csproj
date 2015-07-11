@@ -49,13 +49,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\IExportManager.cs" />
-    <Compile Include="Common\IItem.cs" />
-    <Compile Include="Common\IManifest.cs" />
+    <Compile Include="Common\Helper.cs" />
+    <Compile Include="Export\Interfaces\IExportManager.cs" />
+    <Compile Include="Common\Interfaces\IItem.cs" />
+    <Compile Include="Common\Interfaces\IManifest.cs" />
     <Compile Include="Common\ManifestBO.cs" />
-    <Compile Include="Common\OptionsBO.cs" />
+    <Compile Include="Common\Parameters\OptionsBO.cs" />
     <Compile Include="Common\MType.cs" />
-    <Compile Include="Common\OptionsManager.cs" />
+    <Compile Include="Common\Parameters\OptionsManager.cs" />
     <Compile Include="Common\SPManager.cs" />
     <Compile Include="Export\ExportManager.cs" />
     <Compile Include="Program.cs" />
@@ -63,6 +64,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Import\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
