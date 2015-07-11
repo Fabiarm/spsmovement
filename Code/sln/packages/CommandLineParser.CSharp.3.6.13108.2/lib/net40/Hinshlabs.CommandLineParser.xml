@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Hinshlabs.CommandLineParser
+</name>
+</assembly>
+<members>
+<member name="P:Hinshlabs.CommandLineParser.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Hinshlabs.CommandLineParser.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Hinshlabs.CommandLineParser.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:Hinshlabs.CommandLineParser.CommandLineBase.#ctor">
+	<summary>
+ You must use the shared methods to get an instance of this class
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Hinshlabs.CommandLineParser.CommandLineBase.CreateCommandLine``1">
+	<summary>
+ Created a command line object using the Environment.CommandLine information
+ </summary>
+	<typeparam name="TCommandLine">The concrete type of object to create</typeparam>
+	<returns>An instance of the object</returns>
+	<remarks></remarks>
+</member><member name="M:Hinshlabs.CommandLineParser.CommandLineBase.CreateCommandLine``1(System.String)">
+	<summary>
+ Created a command line object using the Environment.CommandLine information
+ </summary>
+	<typeparam name="TCommandLine">The concrete type of object to create</typeparam>
+	<param name="CommandLine">The command line arguments to parse</param>
+	<returns></returns>
+	<remarks></remarks>
+</member>
+</members>
+</doc>
