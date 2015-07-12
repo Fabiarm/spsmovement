@@ -8,7 +8,7 @@ namespace SPS.Movement.Common
 {
     public interface IManifest
     {
-        ManifestBO CreateManifest();
-        void SaveManifest(ManifestBO manifest);
+        RootManifestBO CreateManifest();
+        void SaveManifest(RootManifestBO manifest);
     }
 }

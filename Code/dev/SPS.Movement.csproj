@@ -54,7 +54,7 @@
     <Compile Include="Export\Interfaces\IExportManager.cs" />
     <Compile Include="Common\Interfaces\IItem.cs" />
     <Compile Include="Common\Interfaces\IManifest.cs" />
-    <Compile Include="Common\ManifestBO.cs" />
+    <Compile Include="BO\ManifestBO.cs" />
     <Compile Include="Common\Parameters\OptionsBO.cs" />
     <Compile Include="Common\MType.cs" />
     <Compile Include="Common\Parameters\OptionsManager.cs" />

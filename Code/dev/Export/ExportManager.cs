@@ -34,42 +34,39 @@ namespace SPS.Movement.Export
             //throw new NotImplementedException();
         }
 
-        public ManifestBO CreateManifest()
+        public void SaveManifest(RootManifestBO manifest)
         {
-           // var docLib = SPManager.GetDocumentLibrary(ops.WebUrl, ops.DocLibraryUrl);
-            //var tt = docLib.GetItems(new string[] { "Title" });
-            return null;
-            //throw new NotImplementedException();
-        }
-        public void SaveManifest(ManifestBO manifest)
-        {
-            //xCheck.Require(manifest);
-            //throw new NotImplementedException();
-        }
-        public void SaveRootManifest(RootManifestBO manifest)
-        {
-            xCheck.Require(manifest);
+            xCheck.Require(manifest != null &&
+                manifest.DocLibrary != null &&
+                manifest.DocLibrary.ID != Guid.Empty);
+            Helper.CreateDirectory(Path.Combine(ops.ShareFolder, manifest.DocLibrary.ID.ToString("N")));
             var writer = new XmlSerializer(typeof(RootManifestBO));
-            var file = new StreamWriter(ops.ShareFolder + @"\RootManifest.xml", false);
+            var file = new StreamWriter(Path.Combine(ops.ShareFolder, manifest.DocLibrary.ID.ToString("N"), "RootManifest.xml"), false);
             writer.Serialize(file, manifest);
             file.Close();
         }
 
-        public RootManifestBO CreateRootManifest()
+        public RootManifestBO CreateManifest()
         {
             RootManifestBO root = new RootManifestBO() { Type = MType.Export };
             root.State = new List<DocumentItem>();
             var docLib = SPManager.GetDocumentLibrary(ops.WebUrl, ops.DocLibraryUrl);
-            var items = docLib.GetItems(new string[] { "Title" });
+            if (docLib == null)
+                throw new Exception("Document libary didn't find on the web");
+            root.DocLibrary = new DocumentLibrary() { ID = docLib.ID, Title = docLib.Title };
+            var query = new SPQuery() { ViewAttributes = "Scope=\"RecursiveAll\"" };
+            var items = docLib.GetItems(query);
             foreach (SPListItem item in items)
             {
+                
                 root.State.Add(new DocumentItem()
                 {
                     ID = item.ID,
                     Title = item.Title,
                     Url = item.Url,
                     Created = Convert.ToDateTime(item[SPBuiltInFieldId.Created_x0020_Date].ToString()),
-                    Modified = Convert.ToDateTime(item[SPBuiltInFieldId.Modified].ToString())
+                    Modified = Convert.ToDateTime(item[SPBuiltInFieldId.Modified].ToString()),
+                    IsFolder = item.Folder != null
                 });
             }
             return root;

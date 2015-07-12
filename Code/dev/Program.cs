@@ -30,9 +30,8 @@ namespace SPS.Movement
         public static void Export(OptionsBO ops)
         {
             ExportManager manager = new Export.ExportManager(ops);
-            var m = manager.CreateRootManifest();
-            manager.SaveRootManifest(m);
-            manager.SaveManifest(null);
+            var m = manager.CreateManifest();
+            manager.SaveManifest(m);
         }
     }
 }

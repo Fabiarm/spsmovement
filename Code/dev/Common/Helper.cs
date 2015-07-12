@@ -1,6 +1,7 @@
 ﻿using Microsoft.SharePoint;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -55,6 +56,11 @@ namespace SPS.Movement.Common
                             secureCode(elevatedSite, elevatedWeb);
                 }
             });
+        }
+        public static void CreateDirectory(string path)
+        {
+            if (Directory.Exists(path) == false)
+                Directory.CreateDirectory(path);
         }
     }
 }
