@@ -1,0 +1,1 @@
+﻿-o export -w "http://sp4you0:5000/SPSActions/spsm1" -l "http://sp4you0:5000/SPSActions/spsm1/Shared Documents" -s "C:\Share" -t 1

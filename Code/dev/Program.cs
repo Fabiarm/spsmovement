@@ -32,6 +32,7 @@ namespace SPS.Movement
             ExportManager manager = new Export.ExportManager(ops);
             var m = manager.CreateRootManifest();
             manager.SaveRootManifest(m);
+            manager.SaveManifest(null);
         }
     }
 }

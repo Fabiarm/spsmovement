@@ -1,5 +1,6 @@
 ﻿using Microsoft.SharePoint;
 using SPS.Movement.Common;
+using SPS.Movement.Common.Validation;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -42,15 +43,18 @@ namespace SPS.Movement.Export
         }
         public void SaveManifest(ManifestBO manifest)
         {
+            //xCheck.Require(manifest);
             //throw new NotImplementedException();
         }
         public void SaveRootManifest(RootManifestBO manifest)
         {
+            xCheck.Require(manifest);
             var writer = new XmlSerializer(typeof(RootManifestBO));
             var file = new StreamWriter(ops.ShareFolder + @"\RootManifest.xml", false);
             writer.Serialize(file, manifest);
             file.Close();
         }
+
         public RootManifestBO CreateRootManifest()
         {
             RootManifestBO root = new RootManifestBO() { Type = MType.Export };

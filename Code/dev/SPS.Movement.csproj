@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Helper.cs" />
+    <Compile Include="Common\Validation\xCheck.cs" />
     <Compile Include="Export\Interfaces\IExportManager.cs" />
     <Compile Include="Common\Interfaces\IItem.cs" />
     <Compile Include="Common\Interfaces\IManifest.cs" />
@@ -67,6 +68,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Import\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Debug\Export.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
