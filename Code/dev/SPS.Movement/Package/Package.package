@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="755f315e-6c9a-4433-82b9-27d865261952" 
+        solutionId="755f315e-6c9a-4433-82b9-27d865261952" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="SPS.Movement"
+        sharePointProductVersion="15.0">
+</package>
