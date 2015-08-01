@@ -10,6 +10,6 @@ namespace SPS.Movement.Common
     {
         void GetDocuments();
         void ExportToZip();
-        void ExportDocuments();
+        void ExportDocuments(RootManifestBO manifest);
     }
 }

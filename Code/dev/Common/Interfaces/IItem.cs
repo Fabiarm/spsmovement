@@ -13,6 +13,5 @@ namespace SPS.Movement.Common
         string Url { get; set; }
         DateTime Modified { get; set; }
         DateTime Created { get; set; }
-        bool IsFolder { get; set; }
     }
 }
