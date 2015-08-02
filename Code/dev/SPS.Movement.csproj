@@ -56,6 +56,13 @@
     <Compile Include="Common\Validation\xCheck.cs" />
     <Compile Include="Export\ExportManager.cs" />
     <Compile Include="Export\Interfaces\IExportManager.cs" />
+    <Compile Include="Layouts\SPS.Movement\Export.aspx.cs">
+      <DependentUpon>Export.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\SPS.Movement\Export.aspx.designer.cs">
+      <DependentUpon>Export.aspx.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SPManager.cs" />
   </ItemGroup>
@@ -88,7 +95,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BO\" />
-    <Folder Include="Layouts\SPS.Movement\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ControlTemplates\SPS.Movement\Header.ascx" />
@@ -98,6 +104,7 @@
     </Content>
     <Content Include="Images\SPS.Movement\export16x16.png" />
     <Content Include="Images\SPS.Movement\export32x32.png" />
+    <Content Include="Layouts\SPS.Movement\Export.aspx" />
     <Content Include="Resources\SPS.Movement.en-US.resx" />
   </ItemGroup>
   <ItemGroup>

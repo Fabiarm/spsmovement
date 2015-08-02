@@ -120,6 +120,9 @@
   <data name="CustomAction_Title_List" xml:space="preserve">
     <value>Export list</value>
   </data>
+  <data name="Export_Page_Title" xml:space="preserve">
+    <value>Export</value>
+  </data>
   <data name="Feature_Description" xml:space="preserve">
     <value>The feature allows to export backups of diffrenent objects</value>
   </data>
