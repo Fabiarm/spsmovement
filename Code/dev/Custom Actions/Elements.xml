@@ -1,3 +1,66 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Control Id="AdditionalPageHead"
+         Sequence="1"
+         ControlSrc="~/_controltemplates/15/SPS.Movement/Header.ascx" />
+
+  <CustomAction
+     Id="SPS.Movement.Export.DocLibrary"
+     Location="CommandUI.Ribbon.ListView"
+     RegistrationId="101"
+     RegistrationType="List">
+
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.Tabs._children">
+          <Tab Id="SPS.Movement.Tab"
+                Title="Movement"
+                Description="Movement:Description"
+                Sequence="150">
+            <Scaling Id="SPS.Movement.Tab.Scaling">
+              <MaxSize Id="SPS.Movement.Tab.ExportGroup.MaxSize"
+                        GroupId="SPS.Movement.Tab.ExportGroup"
+                        Size="OneLarge"/>
+              <Scale Id="SPS.Movement.Tab.ExportGroup.Scaling.CustomTabScaling"
+                      GroupId="SPS.Movement.Tab.ExportGroup"
+                      Size="OneLarge" />
+            </Scaling>
+            <Groups Id="SPS.Movement.Tab.Groups">
+              <Group Id="SPS.Movement.Tab.ExportGroup"
+                      Description="Export:Description"
+                      Title="Export"
+                      Sequence="10"
+                      Template="Ribbon.Templates.OneLargeExample">
+                <Controls Id="SPS.Movement.Tab.ExportGroup.Controls">
+                  <Button Id="SPS.Movement.Tab.ExportGroup.Notify"
+                          Command="SPS.Movement.ExportGroupCommand"
+                          Sequence="10"
+                          Image16by16="/_layouts/15/images/sps.movement/export16x16.png"
+                          Image32by32="/_layouts/15/images/sps.movement/export32x32.png"
+                          Description=""
+                          LabelText="Export document lbrary"
+                          TemplateAlias="cust1"/>
+                </Controls>
+              </Group>
+            </Groups>
+          </Tab>
+        </CommandUIDefinition>
+        <CommandUIDefinition Location="Ribbon.Templates._children">
+          <GroupTemplate Id="Ribbon.Templates.OneLargeExample">
+            <Layout Title="OneLarge" LayoutTitle="OneLarge">
+              <Section Alignment="Top" Type="OneRow">
+                <Row>
+                  <ControlRef DisplayMode="Large" TemplateAlias="cust1" />
+                </Row>
+              </Section>
+            </Layout>
+          </GroupTemplate>
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler Command="SPS.Movement.ExportGroupCommand"
+                          CommandAction="Javascript:ShowExportDlg('{StandardTokens}&amp;Source={Source}&amp;listId={ListId}&amp;Type=List');" />
+      </CommandUIHandlers>
+    </CommandUIExtension>
+  </CustomAction>
 </Elements>
