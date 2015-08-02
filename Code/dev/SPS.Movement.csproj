@@ -59,8 +59,14 @@
     <Compile Include="SPManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Custom Actions\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5366d3d0-2870-4dd5-9f35-07665a030c26}</SharePointProjectItemId>
+    </None>
     <None Include="Features\SPS.Movement.Web.Feature\SPS.Movement.Web.Feature.feature">
       <FeatureId>{1053e263-8209-4491-bd26-7f91feaf3833}</FeatureId>
+    </None>
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{712cde8d-7532-4be6-b7e9-53d4e9ecb716}</SharePointProjectItemId>
     </None>
     <None Include="Resources\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{6e04b4ba-853b-4722-9018-79f71d3d38c6}</SharePointProjectItemId>
@@ -77,9 +83,11 @@
     <Folder Include="BO\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Custom Actions\Elements.xml" />
     <Content Include="Features\SPS.Movement.Web.Feature\SPS.Movement.Web.Feature.Template.xml">
       <DependentUpon>SPS.Movement.Web.Feature.feature</DependentUpon>
     </Content>
+    <Content Include="Images\SPS.Movement\formatmap32x32.png" />
     <Content Include="Resources\SPS.Movement.en-US.resx" />
   </ItemGroup>
   <ItemGroup>
