@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPS.Movement.Console", "..\dev\Console\SPS.Movement.Console.csproj", "{B9DFDB56-93B6-467A-B0C5-98020C190296}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPS.Movement", "..\dev\SPS.Movement\SPS.Movement.csproj", "{3AB675C3-C273-43F4-99C0-6184B12D3712}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPS.Movement", "..\dev\SPS.Movement.csproj", "{3AB675C3-C273-43F4-99C0-6184B12D3712}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
