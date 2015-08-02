@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="755f315e-6c9a-4433-82b9-27d865261952" solutionId="755f315e-6c9a-4433-82b9-27d865261952" resetWebServer="false" sharePointProductVersion="15.0" name="SPS.Movement" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="1053e263-8209-4491-bd26-7f91feaf3833" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="6e04b4ba-853b-4722-9018-79f71d3d38c6" />
+  </projectItems>
+</package>
