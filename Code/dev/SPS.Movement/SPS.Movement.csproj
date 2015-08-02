@@ -59,6 +59,12 @@
     <Compile Include="SPManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Features\SPS.Movement.Web.Feature\SPS.Movement.Web.Feature.feature">
+      <FeatureId>{1053e263-8209-4491-bd26-7f91feaf3833}</FeatureId>
+    </None>
+    <None Include="Resources\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6e04b4ba-853b-4722-9018-79f71d3d38c6}</SharePointProjectItemId>
+    </None>
     <None Include="SPS.Movement.Key.snk" />
     <None Include="Package\Package.package">
       <PackageId>{755f315e-6c9a-4433-82b9-27d865261952}</PackageId>
@@ -69,7 +75,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BO\" />
-    <Folder Include="Features\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\SPS.Movement.Web.Feature\SPS.Movement.Web.Feature.Template.xml">
+      <DependentUpon>SPS.Movement.Web.Feature.feature</DependentUpon>
+    </Content>
+    <Content Include="Resources\SPS.Movement.en-US.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\SPS.Movement.ru-RU.resx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
