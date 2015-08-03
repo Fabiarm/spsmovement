@@ -27,5 +27,20 @@ namespace SPS.Movement
             });
             return list;
         }
+        public static SPList GetList(string webUrl, Guid listId)
+        {
+            SPList list = null;
+            if (listId == null || listId == Guid.Empty) return list;
+            Helper.RunElevated(webUrl, Guid.Empty, delegate (SPSite elevatedSite, SPWeb elevatedWeb)
+            {
+                try
+                {
+                    list = elevatedWeb.Lists[listId];
+                }
+                catch (Exception ex)
+                { }
+            });
+            return list;
+        }
     }
 }

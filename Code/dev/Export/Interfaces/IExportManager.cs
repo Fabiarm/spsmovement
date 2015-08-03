@@ -9,6 +9,7 @@ namespace SPS.Movement.Export
 {
     public interface IExportManager
     {
-        string GetExportFile(SPExportSettings settings);
+        void RunExport();
+        void AddObjects(List<SPExportObject> list);
     }
 }

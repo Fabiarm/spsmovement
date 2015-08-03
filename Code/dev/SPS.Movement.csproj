@@ -46,6 +46,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.SharePoint" />
@@ -54,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Common\Helper.cs" />
     <Compile Include="Common\Validation\xCheck.cs" />
+    <Compile Include="Export\ExportHandler.cs" />
     <Compile Include="Export\ExportManager.cs" />
     <Compile Include="Export\Interfaces\IExportManager.cs" />
     <Compile Include="Layouts\SPS.Movement\Export.aspx.cs">

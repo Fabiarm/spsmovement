@@ -59,7 +59,7 @@
       </CommandUIDefinitions>
       <CommandUIHandlers>
         <CommandUIHandler Command="SPS.Movement.ExportGroupCommand"
-                          CommandAction="Javascript:ShowExportDlg('{StandardTokens}&amp;Source={Source}&amp;listId={ListId}&amp;Type=List');" />
+                          CommandAction="Javascript:ShowExportDlg('Source={Source}&amp;listId={ListId}&amp;SiteUrl={SiteUrl}&amp;Type=List');" />
       </CommandUIHandlers>
     </CommandUIExtension>
   </CustomAction>
