@@ -54,10 +54,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Helper.cs" />
+    <Compile Include="Common\QSettings.cs" />
     <Compile Include="Common\Validation\xCheck.cs" />
     <Compile Include="Export\ExportHandler.cs" />
     <Compile Include="Export\ExportManager.cs" />
     <Compile Include="Export\Interfaces\IExportManager.cs" />
+    <Compile Include="Export\Interfaces\QuerySettings.cs" />
     <Compile Include="Layouts\SPS.Movement\Export.aspx.cs">
       <DependentUpon>Export.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -84,6 +86,7 @@
     <None Include="Layouts\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{096160f9-bc3e-4755-8fb2-f46528f343fd}</SharePointProjectItemId>
     </None>
+    <None Include="Layouts\SPS.Movement\ExportHandler.ashx" />
     <None Include="Resources\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{6e04b4ba-853b-4722-9018-79f71d3d38c6}</SharePointProjectItemId>
     </None>
@@ -99,7 +102,10 @@
     <Folder Include="BO\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ControlTemplates\SPS.Movement\ButtonSection.ascx" />
     <Content Include="ControlTemplates\SPS.Movement\Header.ascx" />
+    <Content Include="ControlTemplates\SPS.Movement\InputFormControl.ascx" />
+    <Content Include="ControlTemplates\SPS.Movement\InputFormSection.ascx" />
     <Content Include="Custom Actions\Elements.xml" />
     <Content Include="Features\SPS.Movement.Web.Feature\SPS.Movement.Web.Feature.Template.xml">
       <DependentUpon>SPS.Movement.Web.Feature.feature</DependentUpon>

@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Web.UI;
 
 namespace SPS.Movement.Common
@@ -96,6 +97,42 @@ namespace SPS.Movement.Common
                 }
                 ScriptManager.RegisterClientScriptBlock(control, control.GetType(), Guid.NewGuid().ToString(), stringBuilder.ToString(), true);
             }
+        }
+        public static QSettings GetSettings(HttpRequest request)
+        {
+            QSettings settings = new QSettings();
+            if (request.QueryString["SiteUrl"] != null)
+                settings.SiteUrl = request.QueryString["SiteUrl"].ToString();
+            if (request.QueryString["ListId"] != null)
+                settings.ListId = Guid.Parse(request.QueryString["ListId"].ToString());
+            if (request.QueryString["Type"] != null)
+            {
+                switch (request.QueryString["Type"].ToLower())
+                {
+                    case "file":
+                        settings.Type = SPDeploymentObjectType.File;
+                        break;
+                    case "folder":
+                        settings.Type = SPDeploymentObjectType.Folder;
+                        break;
+                    case "list":
+                        settings.Type = SPDeploymentObjectType.List;
+                        break;
+                    case "listitem":
+                        settings.Type = SPDeploymentObjectType.ListItem;
+                        break;
+                    case "site":
+                        settings.Type = SPDeploymentObjectType.Site;
+                        break;
+                    case "web":
+                        settings.Type = SPDeploymentObjectType.Web;
+                        break;
+                    default:
+                        settings.Type = SPDeploymentObjectType.Invalid;
+                        break;
+                }
+            }
+            return settings;
         }
     }
 }

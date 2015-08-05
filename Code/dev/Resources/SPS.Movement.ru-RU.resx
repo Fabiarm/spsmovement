@@ -120,6 +120,42 @@
   <data name="CustomAction_Title_List" xml:space="preserve">
     <value>Экспорт листа</value>
   </data>
+  <data name="Export_Page_FileCompression" xml:space="preserve">
+    <value>Сжатие файла</value>
+  </data>
+  <data name="Export_Page_SPExportMethodType" xml:space="preserve">
+    <value>Метод экспорта</value>
+  </data>
+  <data name="Export_Page_SPExportMethodType_All" xml:space="preserve">
+    <value>Все изнения</value>
+  </data>
+  <data name="Export_Page_SPExportMethodType_Changes" xml:space="preserve">
+    <value>Последние изменения</value>
+  </data>
+  <data name="Export_Page_SPIncludeSecurity" xml:space="preserve">
+    <value>Включить настройки безопасности</value>
+  </data>
+  <data name="Export_Page_SPIncludeSecurity_All" xml:space="preserve">
+    <value>Все</value>
+  </data>
+  <data name="Export_Page_SPIncludeSecurity_None" xml:space="preserve">
+    <value>Не включать</value>
+  </data>
+  <data name="Export_Page_SPIncludeVersions" xml:space="preserve">
+    <value>Включить версии</value>
+  </data>
+  <data name="Export_Page_SPIncludeVersions_All" xml:space="preserve">
+    <value>Все</value>
+  </data>
+  <data name="Export_Page_SPIncludeVersions_CurrentVersion" xml:space="preserve">
+    <value>Текущая версия</value>
+  </data>
+  <data name="Export_Page_SPIncludeVersions_LastMajor" xml:space="preserve">
+    <value>Last major</value>
+  </data>
+  <data name="Export_Page_SPIncludeVersions_LastMajorAndMinor" xml:space="preserve">
+    <value>Last major and minor</value>
+  </data>
   <data name="Export_Page_Title" xml:space="preserve">
     <value>Экспорт</value>
   </data>

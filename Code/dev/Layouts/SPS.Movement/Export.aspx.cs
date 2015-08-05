@@ -9,57 +9,30 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Web;
+using SPS.Movement.Export.Interfaces;
 
 namespace SPS.Movement.Layouts.SPS.Movement
 {
-    public partial class Export : LayoutsPageBase
+    public partial class Export : LayoutsPageBase, IQuerySettings
     {
-        Guid listId = Guid.Empty;
-        string siteUrl = string.Empty;
-        SPDeploymentObjectType type;
+        private QSettings settings;
         protected override void OnInit(EventArgs e)
         {
-            if (Request.QueryString["SiteUrl"] != null)
-                siteUrl = Request.QueryString["SiteUrl"].ToString();
-            if (Request.QueryString["ListId"] != null)
-                listId = Guid.Parse(Request.QueryString["ListId"].ToString());
-            if (Request.QueryString["Type"] != null)
-            {
-                switch (Request.QueryString["Type"].ToLower())
-                {
-                    case "file":
-                        type = SPDeploymentObjectType.File;
-                        break;
-                    case "folder":
-                        type = SPDeploymentObjectType.Folder;
-                        break;
-                    case "list":
-                        type = SPDeploymentObjectType.List;
-                        break;
-                    case "listitem":
-                        type = SPDeploymentObjectType.ListItem;
-                        break;
-                    case "site":
-                        type = SPDeploymentObjectType.Site;
-                        break;
-                    case "web":
-                        type = SPDeploymentObjectType.Web;
-                        break;
-                    default:
-                        type = SPDeploymentObjectType.Invalid;
-                        break;
-                }
-            }
-            ExportManager.SiteUrl = siteUrl;
+            SetSettings(HttpContext.Current);
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            switch (type)
+        }
+
+        private void SetSettings()
+        {
+            ExportManager.Instance.Clear();
+            switch (settings.Type)
             {
                 case SPDeploymentObjectType.List:
-                    if (listId == null || listId == Guid.Empty) throw new Exception("LisId is missing");
-                    var l = SPManager.GetList(siteUrl, listId);
+                    if (settings.ListId == null || settings.ListId == Guid.Empty) throw new Exception("LisId is missing");
+                    var l = SPManager.GetList(settings.SiteUrl, settings.ListId);
                     if (l == null) throw new Exception("List doesn't exist");
                     var list = Helper.GetExportObject(l);
                     ExportManager.Instance.AddObjects(new List<SPExportObject>() { list });
@@ -69,6 +42,7 @@ namespace SPS.Movement.Layouts.SPS.Movement
 
         protected void btnExport_Click(object sender, EventArgs e)
         {
+            SetSettings();
             ExportFile();
         }
 
@@ -84,14 +58,20 @@ namespace SPS.Movement.Layouts.SPS.Movement
                     Response.AddHeader("Content-Type", "application/octet-stream");
                     Response.AddHeader("Content-Disposition", "attachment; filename=\"" + ExportManager.Instance.ExportBaseFileName + "\"");
                     Response.Write(sr);
-                    Response.Flush();
-                    Response.End();
+                    HttpContext.Current.ApplicationInstance.CompleteRequest();
                 }
             }
             catch (Exception ex)
             {
                 SPUtility.TransferToErrorPage(ex.ToString());
             }
+        }
+
+        public void SetSettings(HttpContext context)
+        {
+            settings = Helper.GetSettings(context.Request);
+            if (!string.IsNullOrEmpty(settings.SiteUrl))
+                ExportManager.SiteUrl = settings.SiteUrl;
         }
     }
 }

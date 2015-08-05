@@ -13,6 +13,114 @@ namespace SPS.Movement.Layouts.SPS.Movement {
     public partial class Export {
         
         /// <summary>
+        /// InputFormSection1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UserControl InputFormSection1;
+        
+        /// <summary>
+        /// ltlTitleSecurity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Microsoft.SharePoint.WebControls.EncodedLiteral ltlTitleSecurity;
+        
+        /// <summary>
+        /// ddlSecurity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlSecurity;
+        
+        /// <summary>
+        /// InputFormSection2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UserControl InputFormSection2;
+        
+        /// <summary>
+        /// ltlTitleVersions control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Microsoft.SharePoint.WebControls.EncodedLiteral ltlTitleVersions;
+        
+        /// <summary>
+        /// ddlVersions control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlVersions;
+        
+        /// <summary>
+        /// InputFormSection3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UserControl InputFormSection3;
+        
+        /// <summary>
+        /// ltlTitleMethodType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Microsoft.SharePoint.WebControls.EncodedLiteral ltlTitleMethodType;
+        
+        /// <summary>
+        /// ddlMethodType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlMethodType;
+        
+        /// <summary>
+        /// InputFormSection4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UserControl InputFormSection4;
+        
+        /// <summary>
+        /// ltlTitleFileCompression control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Microsoft.SharePoint.WebControls.EncodedLiteral ltlTitleFileCompression;
+        
+        /// <summary>
+        /// chbFileCompression control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chbFileCompression;
+        
+        /// <summary>
         /// btnExport control.
         /// </summary>
         /// <remarks>

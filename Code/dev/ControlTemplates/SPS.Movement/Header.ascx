@@ -13,7 +13,9 @@
             url: SP.Utilities.Utility.getLayoutsPageUrl('SPS.Movement/Export.aspx?' + prms),
             title: Res.export_Page_Title,
             allowMaximize: false,
-            autoSize: true,
+            width: 450,
+            height: 230,
+            autoSize: false,
             showClose: true,
             dialogReturnValueCallback: function (dialogResult) {
                 SP.UI.ModalDialog.RefreshPage(dialogResult)

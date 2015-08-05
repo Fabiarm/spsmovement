@@ -120,6 +120,42 @@
   <data name="CustomAction_Title_List" xml:space="preserve">
     <value>Export list</value>
   </data>
+  <data name="Export_Page_FileCompression" xml:space="preserve">
+    <value>File сompression</value>
+  </data>
+  <data name="Export_Page_SPExportMethodType" xml:space="preserve">
+    <value>Export method</value>
+  </data>
+  <data name="Export_Page_SPExportMethodType_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Export_Page_SPExportMethodType_Changes" xml:space="preserve">
+    <value>Changes</value>
+  </data>
+  <data name="Export_Page_SPIncludeSecurity" xml:space="preserve">
+    <value>Include security</value>
+  </data>
+  <data name="Export_Page_SPIncludeSecurity_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Export_Page_SPIncludeSecurity_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Export_Page_SPIncludeVersions" xml:space="preserve">
+    <value>Include versions</value>
+  </data>
+  <data name="Export_Page_SPIncludeVersions_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Export_Page_SPIncludeVersions_CurrentVersion" xml:space="preserve">
+    <value>Current version</value>
+  </data>
+  <data name="Export_Page_SPIncludeVersions_LastMajor" xml:space="preserve">
+    <value>Last major</value>
+  </data>
+  <data name="Export_Page_SPIncludeVersions_LastMajorAndMinor" xml:space="preserve">
+    <value>Last major and minor</value>
+  </data>
   <data name="Export_Page_Title" xml:space="preserve">
     <value>Export</value>
   </data>
